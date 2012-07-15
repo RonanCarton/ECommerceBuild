@@ -1,0 +1,37 @@
+<p id="notice"> <%= notice %> </p>
+<h2>Your Cart</h2>
+<ul>
+  <% for item in @cart.line_items %>
+      <li><%= item.quantity %> &times;
+      <%= item.product.name %> </li>
+  <% end %><br/>
+
+  Total Price: <%= number_to_currency( @cart.total_price, :unit => '&euro;') %><br/>
+  <br/>
+  <%= button_to 'Empty cart', @cart, :method => :delete, :confirm => 'Are you sure?' %>
+</ul>
+
+
+<%= link_to 'Edit', edit_cart_path(@cart) %> |
+<%= link_to 'Back', carts_path %>
+
+  <!--New Code For Side Bar -->
+
+
+
+ <!-- <#%if notice %>
+    <p id="notice"><#%= notice %></p>
+<#% end %>
+To Render Cart
+<#%= render @cart %>
+
+<div class="cart_title">Your Cart</div>
+<table>
+  <#%= render(@cart.line_items) %>
+  <tr class="total_line">
+    <td colspan="2">Total</td>
+    <td class="total_cell"><#%= number_to_currency(@cart.total_price) %></td>
+  </tr>
+</table>
+<#%= button_to 'Empty cart', @cart, method: :delete,
+              confirm: 'Are you sure?' %> -->

@@ -1,0 +1,25 @@
+<h1>Create Supplier</h1>
+<% form_for(@supplier) do |f| %>
+    <% if @supplier.errors.any? %>
+        <div id="errorExplanation">
+          <h2><%= pluralize(@supplier.errors.count, "error") %> prohibited this supplier from being saved:</h2>
+          <ul>
+            <% @supplier.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    #<div class="field">
+      <%= f.label :email %><br />
+      <!--<#%= f.text_field :email %>   -->
+    </div>
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Create User"%>
+    </div>
+<% end %>
+<%= link_to 'Back', products_path %>

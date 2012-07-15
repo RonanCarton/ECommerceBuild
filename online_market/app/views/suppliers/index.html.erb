@@ -1,0 +1,33 @@
+<h1>Fallon & Byrne Suppliers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Binary data</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @suppliers.each do |supplier| %>
+  <tr>
+    <td><%= supplier.name %></td>
+    <td><%= supplier.description %></td>
+    <td><%= supplier.binary_data %></td>
+    <td><%= link_to 'Show', supplier %></td>
+    <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
+    <td><%= link_to 'Destroy', supplier, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<% form_tag suppliers_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search_query, params[:search_query] %>
+      <%= submit_tag "Search", :name => nil %>
+    </p>
+<% end %>
+
+<br />
+
+<%= link_to 'New Supplier', new_supplier_path %>

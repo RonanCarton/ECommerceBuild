@@ -1,0 +1,27 @@
+<h1>Create User</h1>
+<% form_for(@user) do |f| %>
+    <% if @user.errors.any? %>
+        <div id="errorExplanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="field">
+      <%= f.label :email %>
+      <br/>
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :password %>
+      <br/>
+      <%= f.password_field :password %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Create User" %>
+    </div>
+<% end %>
+<%= link_to 'Back', products_path %>

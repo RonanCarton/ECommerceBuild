@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing products</h1>
+<th>UserID</th>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>UserID</th>
+    <th>Image URL</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @products.each do |product| %>
+  <tr>
+
+    <!-- <div class="image">
+      <#%= link_to (product.image_url), item %>
+    </div> -->
+
+    <td><%= product.name %></td>
+    <td><%= product.description %></td>
+    <td><%= product.price %></td>
+    <td><%= product.user_id %></td>
+    <td><%= product.image_url %></td>
+    <td><%= link_to 'Show', product %></td>
+    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= button_to 'Add to Cart', line_items_path(:product_id => product) %></td>
+  </tr>
+<% end %>
+</table>
+<% form_tag products_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search_query,
+                         params[:search_query] %> <!--advanced search params here -->
+      <%= submit_tag "Search", :name => nil %>
+    </p>
+<% end %>
+
+
+<br />
+
+<%= link_to 'New Product', new_product_path %>
