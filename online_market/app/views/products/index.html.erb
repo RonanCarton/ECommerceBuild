@@ -25,7 +25,7 @@
     <td><%= product.description %></td>
     <td><%= product.price %></td>
     <td><%= product.user_id %></td>
-    <td><%= product.image_url %></td>
+    <td><%= image_tag(product.image_url) unless product.image_url.nil? %></td> <!--image_tag(product.image_url) unless product.image_url.nil? -->
     <td><%= link_to 'Show', product %></td>
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>

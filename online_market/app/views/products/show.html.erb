@@ -17,7 +17,7 @@
 
 <p>
   <b>Image</b>
-  <%= @product.image %>
+  <%= image_tag(product.image_url) unless product.image_url.nil? %>
 </p>
 
 
