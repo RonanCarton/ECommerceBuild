@@ -47,3 +47,36 @@ ul {
   th { border-bottom: 1px solid #DDD !important; }
   td.picture { width: 140px; }
   td.picture img { width: 140px; }
+
+  .depot_form {
+    fieldset {
+      background: #efe;
+      legend {
+        color: #dfd;
+        background: #141;
+        font-family: sans-serif;
+        158 • Chapter 12. Task G: Check Out!
+        Prepared exclusively for Ronan Carton report erratum • discuss
+        padding: 0.2em 1em;
+      }
+    }
+    form {
+      label {
+        width: 5em;
+        float: left;
+        text-align: right;
+        padding-top: 0.2em;
+        margin-right: 0.1em;
+        display: block;
+      }
+      select, textarea, input {
+        margin-left: 0.5em;
+      }
+      .submit {
+        margin-left: 4em;
+      }
+      br {
+        display: none
+      }
+    }
+  }
