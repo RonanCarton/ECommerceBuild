@@ -3,6 +3,8 @@ OnlineMarket::Application.routes.draw do
 
 
 
+  resources :orders
+
   resources :suppliers
   resources :line_items
 

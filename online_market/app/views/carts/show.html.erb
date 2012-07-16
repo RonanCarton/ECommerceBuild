@@ -1,35 +1,41 @@
 <p id="notice"> <%= notice %> </p>
 <h2>Your Cart</h2>
-<ul>
-  <% for item in @cart.line_items %>
-      <li><%= item.quantity %> &times;
-      <%= item.product.name %> </li>
-  <% end %><br/>
+<table>
+  <thead>
+  <tr>
 
-  Total Price: <%= number_to_currency( @cart.total_price, :unit => '&euro;') %><br/>
-  <br/>
+
+  </tr>
+
+
+  </thead>
+  Total Price: <%= number_to_currency(@cart.total_price, :unit => '&euro;') %>
+  <%= button_to "Checkout", new_order_path, method: :get %>   <!-- added new checkout button -->
   <%= button_to 'Empty cart', @cart, :method => :delete, :confirm => 'Are you sure?' %>
-</ul>
+</table>
 
 
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 <%= link_to 'Back', carts_path %>
 
-  <!--New Code For Side Bar via Agile web dev with rails -->
+<!--New Code For Side Bar via Agile web dev with rails -->
 
 
 
- <!-- <#%if notice %>
-    <p id="notice"><#%= notice %></p>
-<#% end %>
+<% if notice %>
+    <p id="notice">
+      <#%= notice %>
+    </p>
+<% end %>
 To Render Cart
-<#%= render @cart %>
+<%= render @cart %>
 
 <div class="cart_title">Your Cart</div>
 <table>
-  <#%= render(@cart.line_items) %>
+  <%= render(@cart.line_items) %>
   <tr class="total_line">
     <td colspan="2">Total</td>
-    <td class="total_cell"><#%= number_to_currency(@cart.total_price) %></td>
+    <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
+    <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
   </tr>
 </table>
