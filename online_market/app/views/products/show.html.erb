@@ -17,10 +17,13 @@
 
 <p>
   <b>Image</b>
-  <%= image_tag(product.image_url) unless product.image_url.nil? %>
+  <%= product.image_url %>
 </p>
 
 
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+
+
+<!-- <#%= image_tag(product.image_url) unless product.image_url.nil? %> -->

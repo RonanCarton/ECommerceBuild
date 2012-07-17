@@ -1,9 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  email: MyString
-  password: MyString
+#one:
+#  email: MyString
+#  password: MyString
+#
+#two:
+#  email: MyString
+#  password: MyString
 
+# via Agile
+one:
+name: dave
+password_digest: <%= BCrypt::Password.create('secret') %>
 two:
-  email: MyString
-  password: MyString
+name: MyString
+password_digest: MyString

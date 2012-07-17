@@ -1,7 +1,14 @@
 OnlineMarket::Application.routes.draw do
 
 
+  get "admin" => "admin#index"
+  #get "admin/index"
 
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
 
   resources :orders
 
@@ -17,15 +24,19 @@ OnlineMarket::Application.routes.draw do
   get "welcome/register"
   get "welcome/suppliers"
 
-  resources :products
+# via agile
+  resources :products do
+    get :who_bought, on: :member
+  end
+#  resources :products
   resources :users
   resources :sessions
 
 
   match '/your_cart' => "carts#your_cart", :as => "your_cart"
-  match '/login' => "sessions#new", :as => "login"
-  match '/logout' => "sessions#destroy", :as => "logout"
-  match '/suppliers' => "suppliers#new", :as => "suppliers"
+  #match '/login' => "sessions#new", :as => "login"
+  #match '/logout' => "sessions#destroy", :as => "logout"
+ # match '/suppliers' => "suppliers#new", :as => "suppliers"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -13,7 +13,7 @@ Product.create(:name => 'Medium Veg Box',
 
 Product.create(:name => 'Medium Fruit & Veg Box',
                :description => '3 fruit and 7 seasonal veg, including potatoes, every week', :price =>
-        '17.50', :image_tag =>"\images\Basil.jpg")
+        '17.50', :image_url =>'\images\Basil.jpg')
 
 Product.create(:name => 'Large Fruit Box',
                :description => '5 seasonal fruit bowl classics like apples, bananas and plums', :price => '15.50')
