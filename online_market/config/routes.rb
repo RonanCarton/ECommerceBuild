@@ -34,9 +34,9 @@ OnlineMarket::Application.routes.draw do
 
 
   match '/your_cart' => "carts#your_cart", :as => "your_cart"
-  #match '/login' => "sessions#new", :as => "login"
-  #match '/logout' => "sessions#destroy", :as => "logout"
- # match '/suppliers' => "suppliers#new", :as => "suppliers"
+  match '/login' => "sessions#new", :as => "login"
+  match '/logout' => "sessions#destroy", :as => "logout"
+ match '/suppliers' => "suppliers#new", :as => "suppliers"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

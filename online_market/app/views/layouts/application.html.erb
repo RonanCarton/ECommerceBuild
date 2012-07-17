@@ -13,26 +13,22 @@
 </head>
 <!-- Boot Strap CSS -->
 
-<footer>
-  <div class="container">
 
-    <%= image_tag "winecellar.jpg",  %>
-    <p>Fallon and Byrne Store</p>
-  </div>
-</footer>
+
+
+
+
+
 <body>
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
 
-    </div>
-  </div>
-</div>
+<%= image_tag "winecellar.jpg",  %>
+<h1>Fallon and Byrne Store</h1>
+
 
 <div class="body">
 
 
-
+<div class="body lead">
 
 | <%= link_to "Product Catalogue", products_path %> |
 <%= link_to "Leave Site", :controller => "welcome",
@@ -58,6 +54,8 @@
 <%= link_to "Create User", new_user_path %> |
 <%= link_to "Login", login_path %>
 <%= link_to "Logout", logout_path %>
+
+  </div>
 
 <!-- ******************************************** Render Cart to Side  -->
 <!--<div id="columns">

@@ -6,7 +6,7 @@ class Product < ActiveRecord::Base
   #has_many :suppliers
   before_destroy :ensure_not_referenced_by_any_line_item # Agile Dev with Rails
 
-  attr_accessible :name, :description, :price
+  attr_accessible :name, :description, :price, :image_url
 
   def self.search(search_query)
     if search_query

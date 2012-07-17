@@ -23,13 +23,10 @@
     <%= f.label :price %><br />
     <%= f.text_field :price %>
     <div class="field">
-      <%= f.label :image_url %><br />
-      <%= f.text_field :image_url %>
+      <%= image_tag(product.image_url) unless product.image_url.nil? %><br />
+
     </div>
-    <div class="field">
-      <%= f.label :image_url %><br />
-      <%= f.text_field :image_url %>
-    </div>
+
     <!--<div class="field">
       <#%= f.label :image %><br />
       <#%= f.text_field :image %>

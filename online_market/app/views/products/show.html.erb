@@ -17,7 +17,7 @@
 
 <p>
   <b>Image</b>
-  <%= product.image_url %>
+  <%= image_tag(@product.image_url) unless product.image_url.nil? %> %>
 </p>
 
 
@@ -26,4 +26,3 @@
 <%= link_to 'Back', products_path %>
 
 
-<!-- <#%= image_tag(product.image_url) unless product.image_url.nil? %> -->

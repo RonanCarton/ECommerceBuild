@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  skip_before_filter :authorize  # via agile
   protect_from_forgery
   protected
 # Returns the currently logged in user or nil if there isn't one
@@ -28,6 +29,17 @@ class ApplicationController < ActionController::Base
     @cart = current_cart
   end
 
+  # via agile
+
+  def authorize
+  unless User.find_by_id(session[:user_id])
+      redirect_to login_url, notice: "Please log in"
+      end
+   end
+end
+
+#######################################
+
   private
   def current_cart
     Cart.find(session[:cart_id])
@@ -36,7 +48,7 @@ class ApplicationController < ActionController::Base
     session[:cart_id] = cart.id
     cart
     end
-  end
+
 
 
 

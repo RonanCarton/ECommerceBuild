@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  skip_before_filter :authorize, only: [:new, :create]  # via agile
   # GET /orders
   # GET /orders.xml
   def index
@@ -24,12 +25,13 @@ class OrdersController < ApplicationController
   # GET /orders/new
   # GET /orders/new.xml
 
-  def new               # new empty cart re direct code from Agile Web Development with rails
-    @cart = current_cart
-    if @cart.line_items.empty?
-      redirect_to store_url, notice: "Your cart is empty"
-      return
-    end
+ # def new               # new empty cart re direct code from Agile Web Development with rails
+   # @cart = current_cart
+   # if @cart.line_items.empty?
+    #  redirect_to store_url, notice: "Your cart is empty"
+     # return
+   # end
+
   def new
     @order = Order.new
 
@@ -94,4 +96,4 @@ class OrdersController < ApplicationController
 
 
 end
-end
+

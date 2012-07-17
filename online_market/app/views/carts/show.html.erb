@@ -19,23 +19,23 @@
 <%= link_to 'Back', carts_path %>
 
 <!--New Code For Side Bar via Agile web dev with rails -->
+<!---->
+<!---->
+<!---->
+<!-- <#% #if notice %> -->
+    <!--<p #id="notice">-->
+      <!--<#%= notice %>-->
+    <!--</p>-->
+<!--<%# end %>-->
+<!--To Render Cart-->
+<!--<#%= #render @cart %>-->
 
-
-
-<% if notice %>
-    <p id="notice">
-      <#%= notice %>
-    </p>
-<% end %>
-To Render Cart
-<%= render @cart %>
-
-<div class="cart_title">Your Cart</div>
-<table>
-  <%= render(@cart.line_items) %>
-  <tr class="total_line">
-    <td colspan="2">Total</td>
-    <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
-    <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
-  </tr>
-</table>
+<!--<div class="cart_title">Your Cart</div>-->
+<!--<table>-->
+  <!--<#%= #render(@cart.line_items) %>-->
+  <!--<tr class="total_line">-->
+    <!--<td colspan="2">Total</td>-->
+    <!--<td class="total_cell"><#%= number_to_currency(@cart.total_price) %></td>-->
+    <!--<td class="total_cell"><#%= number_to_currency(@cart.total_price) %></td>-->
+  <!--</tr>-->
+<!--</table> -->

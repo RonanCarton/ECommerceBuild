@@ -1,25 +1,20 @@
-<h1>Fallon & Byrne Suppliers</h1>
+<h3>Fallon & Byrne Suppliers</h3>
 
-<table border ="1">
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Binary data</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+
 <% @suppliers.each do |supplier| %>
-  <tr>
-    <td><%= supplier.name %></td>
-    <td><%= supplier.description %></td>
-    <td><%= supplier.binary_data %></td>
-    <td><%= link_to 'Show', supplier %></td>
-    <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
-    <td><%= link_to 'Destroy', supplier, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <ol class="unstyled">
+    <li><%= supplier.name %></li>
+    <li><%= supplier.description %></li>
+  <li><%= image_tag(supplier.image_url) unless supplier.image_url.nil? %></li>
+   <!-- <#% if current_user != nil and current_user.admin? %>  -->
+    <li><%= link_to 'Show', supplier %></li>
+    <li><%= link_to 'Edit', edit_supplier_path(supplier) %></li>
+    <li><%= link_to 'Destroy', supplier, :confirm => 'Are you sure?', :method => :delete %></li>
+   <!-- <#% end %> -->
+
+
 <% end %>
-</table>
+</ol>
 
 <% form_tag suppliers_path, :method => 'get' do %>
     <p>
@@ -31,3 +26,4 @@
 <br />
 
 <%= link_to 'New Supplier', new_supplier_path %>
+
