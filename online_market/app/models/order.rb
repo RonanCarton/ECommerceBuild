@@ -12,3 +12,4 @@ class Order < ActiveRecord::Base
   end
 end
 
+#PAYMENT_TYPES = ["Check", "Credit card", "Purchase order"]

@@ -76,7 +76,7 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   # DELETE /products/1.xml
   def destroy
-    @product = Product.find(params[:product_id])  # was just :id
+    @product = Product.find(params[:id])  # was just :id
     @product.destroy
 
     respond_to do |format|

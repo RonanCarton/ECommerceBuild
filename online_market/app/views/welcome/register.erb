@@ -1,10 +1,38 @@
-<h1>Register</h1>
-<div class="field">
-  <%= label_tag :email %>
-  <br/>
-  <%= text_field_tag :email %>
-  <br/>
-  <%= label_tag :password %>
-  <br/>
-  <%= password_field_tag :password %>
-</div>
+<!--<h1>Register</h1>-->
+<!--<div class="field">-->
+  <!--<#%= label_tag :email %>-->
+  <!--<br/>-->
+  <!--<#%= text_field_tag :email %>-->
+  <!--<br/>-->
+  <!--<#%= label_tag :password %>-->
+  <!--<br/>-->
+  <!--<#%= password_field_tag :password %>-->
+<!--</div>-->
+
+<h3>Register</h3>
+<% form_for(@user) do |f| %>
+    <% if @user.errors.any? %>
+        <div id="errorExplanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> You have not been registered:</h2>
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="field">
+      <%= f.label :email %>
+      <br/>
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :password %>
+      <br/>
+      <%= f.password_field :password %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Register" %>
+    </div>
+<% end %>
+<%= link_to 'Back', products_path %>

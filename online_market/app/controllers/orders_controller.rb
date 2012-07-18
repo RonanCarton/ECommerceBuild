@@ -1,13 +1,13 @@
 class OrdersController < ApplicationController
-  skip_before_filter :authorize, only: [:new, :create]  # via agile
-  # GET /orders
-  # GET /orders.xml
+  skip_before_filter :authorize, only: [:new, :create] # via agile
+                                                       # GET /orders
+                                                       # GET /orders.xml
   def index
     @orders = Order.all
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @orders }
+      format.xml { render :xml => @orders }
     end
   end
 
@@ -18,26 +18,26 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @order }
+      format.xml { render :xml => @order }
     end
   end
 
   # GET /orders/new
   # GET /orders/new.xml
 
- # def new               # new empty cart re direct code from Agile Web Development with rails
-   # @cart = current_cart
-   # if @cart.line_items.empty?
-    #  redirect_to store_url, notice: "Your cart is empty"
-     # return
-   # end
+  # def new               # new empty cart re direct code from Agile Web Development with rails
+  # @cart = current_cart
+  # if @cart.line_items.empty?
+  #  redirect_to store_url, notice: "Your cart is empty"
+  # return
+  # end
 
   def new
     @order = Order.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @order }
+      format.xml { render :xml => @order }
     end
   end
 
@@ -55,13 +55,13 @@ class OrdersController < ApplicationController
     respond_to do |format|
       if @order.save
         Cart.destroy(session[:cart_id])
-        session[:cart_id] = nil     # removed @order,
-        format.html { redirect_to( redirect_to store_url,:notice => 'Thank you for your Order.') }
-        format.xml  { render :xml => @order, :status => :created, :location => @order }
+        session[:cart_id] = nil # removed @order,
+        format.html { redirect_to(redirect_to store_url, :notice => 'Thank you for your Order.') }
+        format.xml { render :xml => @order, :status => :created, :location => @order }
       else
         @cart = current_cart
         format.html { render :action => "new" }
-        format.xml  { render :xml => @order.errors, :status => :unprocessable_entity }
+        format.xml { render :xml => @order.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -74,10 +74,10 @@ class OrdersController < ApplicationController
     respond_to do |format|
       if @order.update_attributes(params[:order])
         format.html { redirect_to(@order, :notice => 'Order was successfully updated.') }
-        format.xml  { head :ok }
+        format.xml { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @order.errors, :status => :unprocessable_entity }
+        format.xml { render :xml => @order.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -90,7 +90,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(orders_url) }
-      format.xml  { head :ok }
+      format.xml { head :ok }
     end
   end
 

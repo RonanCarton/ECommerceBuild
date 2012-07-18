@@ -39,22 +39,22 @@
 <%= link_to "Your Cart", :controller => "carts",
             :action => "your_cart" %> |
 
-  <%= link_to "Suppliers",suppliers_path %> |
+  <%= link_to "Growers and Makers",suppliers_path %> |
   <%= link_to "The Food Blog", posts_path %>
 
 <div id='header'>
   <% if logged_in? %>
       <%= current_user.email %> |
-      <%= link_to 'Logout', logout_path %> |
+      <%= link_to "Logout", logout_path %> |
       <%= link_to "Create User", new_user_path %> |
   <% else %>
       <%= link_to "Login", login_path %> |
   <% end %>
 </div>
 
-<%= link_to "Create User", new_user_path %> |
-<%= link_to "Login", login_path %>
-<%= link_to "Logout", logout_path %>
+<!--<#%= link_to "Create User", new_user_path %> |  -->
+ <!--   <#%= link_to "Login", login_path %>
+<#%= link_to "Logout", logout_path %>  -->
 
   </div>
 

@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  skip_before_filter :authorize  # via agile
+  #before_filter :authorize, :except => [:create]   # authorize filter    skip_before_filter :authorize       # via agile
   protect_from_forgery
   protected
 # Returns the currently logged in user or nil if there isn't one

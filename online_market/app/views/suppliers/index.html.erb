@@ -1,4 +1,4 @@
-<h3>Fallon & Byrne Suppliers</h3>
+<h3>Meet Your Growers and Makers</h3>
 
 
 <% @suppliers.each do |supplier| %>
@@ -6,11 +6,11 @@
     <li><h4><%= supplier.name %></h4></li>
     <li><%= supplier.description %></li>
   <li><%= image_tag(supplier.image_url) unless supplier.image_url.nil? %></li>
-   <!-- <#% if current_user != nil and current_user.admin? %>  -->
+   <% if current_user != nil and current_user.admin? %>
     <li><%= link_to 'Show', supplier %></li>
     <li><%= link_to 'Edit', edit_supplier_path(supplier) %></li>
     <li><%= link_to 'Destroy', supplier, :confirm => 'Are you sure?', :method => :delete %></li>
-   <!-- <#% end %> -->
+   <% end %>
 
 
 <% end %>
