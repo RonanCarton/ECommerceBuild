@@ -22,19 +22,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/online_market/app/views/products/show.html.erb">
+      <file leaf-file-name="_cart.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/online_market/app/views/carts/_cart.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="37" selection-start="207" selection-end="207" vertical-scroll-proportion="-5.769231">
+            <state line="2" column="31" selection-start="79" selection-end="79" vertical-scroll-proportion="-1.3076923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/online_market/app/views/products/index.html.erb">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/online_market/app/views/carts/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="60" selection-start="214" selection-end="214" vertical-scroll-proportion="0.18318966">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/online_market/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="6" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.36637932">
               <folding />
             </state>
           </provider>
@@ -55,28 +64,28 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/online_market/app/controllers/sessions_controller.rb" />
-        <option value="$PROJECT_DIR$/online_market/app/controllers/carts_controller.rb" />
-        <option value="$PROJECT_DIR$/online_market/app/controllers/line_items_controller.rb" />
-        <option value="$PROJECT_DIR$/online_market/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/online_market/test/test_helper.rb" />
-        <option value="$PROJECT_DIR$/online_market/app/views/orders/new.html.erb" />
-        <option value="$PROJECT_DIR$/online_market/app/views/carts/show.html.erb" />
-        <option value="$PROJECT_DIR$/online_market/app/controllers/orders_controller.rb" />
-        <option value="$PROJECT_DIR$/online_market/app/models/product.rb" />
-        <option value="$PROJECT_DIR$/online_market/app/views/products/_form.html.erb" />
-        <option value="$PROJECT_DIR$/online_market/app/views/products/show.html.erb" />
-        <option value="$PROJECT_DIR$/online_market/db/schema.rb" />
-        <option value="$PROJECT_DIR$/online_market/db/seeds.rb" />
-        <option value="$PROJECT_DIR$/online_market/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/online_market/app/views/suppliers/index.html.erb" />
         <option value="$PROJECT_DIR$/online_market/app/views/products/index.html.erb" />
+        <option value="$PROJECT_DIR$/online_market/app/views/suppliers/show.html.erb" />
+        <option value="$PROJECT_DIR$/online_market/app/views/suppliers/index.html.erb" />
+        <option value="$PROJECT_DIR$/online_market/config/routes.rb" />
+        <option value="$PROJECT_DIR$/online_market/app/views/comments/_form.erb" />
+        <option value="$PROJECT_DIR$/online_market/app/views/comments/_comment.erb" />
+        <option value="$PROJECT_DIR$/online_market/app/controllers/products_controller.rb" />
+        <option value="$PROJECT_DIR$/online_market/app/controllers/comments_controller.rb" />
+        <option value="$PROJECT_DIR$/online_market/app/models/post.rb" />
+        <option value="$PROJECT_DIR$/online_market/app/views/posts/_form.html.erb" />
+        <option value="$PROJECT_DIR$/online_market/app/views/tags/_form.erb" />
+        <option value="$PROJECT_DIR$/online_market/app/helpers/posts_helper.rb" />
+        <option value="$PROJECT_DIR$/online_market/app/views/posts/show.html.erb" />
+        <option value="$PROJECT_DIR$/online_market/app/controllers/posts_controller.rb" />
+        <option value="$PROJECT_DIR$/online_market/app/views/carts/_cart.erb" />
+        <option value="$PROJECT_DIR$/online_market/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="26" />
-    <option name="y" value="290" />
+    <option name="x" value="545" />
+    <option name="y" value="28" />
     <option name="width" value="1274" />
     <option name="height" value="675" />
   </component>
@@ -200,11 +209,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -227,62 +232,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ECommerceBuild" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ECommerceBuildRevA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="online_market" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="suppliers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ECommerceBuild" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ECommerceBuildRevA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="online_market" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="products" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -327,6 +276,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="carts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ECommerceBuild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ECommerceBuildRevA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="online_market" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ECommerceBuild" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ECommerceBuildRevA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="online_market" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -456,7 +453,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="26" y="290" width="1274" height="675" extended-state="1" />
+    <frame x="545" y="28" width="1274" height="675" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -534,94 +531,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/online_market/app/models/product.rb">
+    <entry file="file://$PROJECT_DIR$/online_market/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="50" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online_market/app/controllers/admin_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online_market/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.1510204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online_market/app/controllers/carts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="67" selection-start="1856" selection-end="1856" vertical-scroll-proportion="0.41020408" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online_market/app/helpers/products_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online_market/app/controllers/products_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online_market/app/views/products/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online_market/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="0" selection-start="10915" selection-end="10915" vertical-scroll-proportion="-2.3501048" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online_market/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="48" selection-start="2297" selection-end="2297" vertical-scroll-proportion="0.58979595" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online_market/app/views/products/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online_market/app/views/suppliers/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="45" selection-start="35" selection-end="35" vertical-scroll-proportion="0.08629441">
+        <state line="3" column="2" selection-start="43" selection-end="43" vertical-scroll-proportion="0.10408163">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/online_market/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="21" selection-start="442" selection-end="442" vertical-scroll-proportion="0.109913796">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online_market/app/views/products/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="37" selection-start="695" selection-end="695" vertical-scroll-proportion="0.9159483">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/online_market/app/views/users/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/online_market/app/models/comment.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/online_market/app/views/products/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/online_market/app/views/carts/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="37" selection-start="207" selection-end="207" vertical-scroll-proportion="-5.769231">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/online_market/app/views/products/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/online_market/app/views/comments/_comment.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="60" selection-start="214" selection-end="214" vertical-scroll-proportion="0.18318966">
+        <state line="14" column="20" selection-start="252" selection-end="252" vertical-scroll-proportion="-9.153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online_market/app/controllers/products_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="0" selection-start="2310" selection-end="2310" vertical-scroll-proportion="0.7829787">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online_market/app/views/comments/_form.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="9" selection-start="331" selection-end="331" vertical-scroll-proportion="0.43965518">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online_market/app/models/post.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="42" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online_market/app/views/posts/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="1" selection-start="824" selection-end="824" vertical-scroll-proportion="-13.076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online_market/app/views/tags/_form.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="9" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online_market/app/views/posts/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="4" selection-start="226" selection-end="226" vertical-scroll-proportion="-10.653846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online_market/app/controllers/posts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="3" selection-start="50" selection-end="50" vertical-scroll-proportion="0.07439825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online_market/app/helpers/posts_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="39" selection-start="95" selection-end="95" vertical-scroll-proportion="0.1734694">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online_market/app/controllers/comments_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="52" selection-start="101" selection-end="101" vertical-scroll-proportion="0.03469388">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online_market/app/views/carts/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online_market/app/views/carts/_cart.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="31" selection-start="79" selection-end="79" vertical-scroll-proportion="-1.3076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online_market/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="6" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.36637932">
           <folding />
         </state>
       </provider>

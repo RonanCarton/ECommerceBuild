@@ -40,6 +40,7 @@
             :action => "your_cart" %> |
 
   <%= link_to "Suppliers",suppliers_path %> |
+  <%= link_to "The Food Blog", posts_path %>
 
 <div id='header'>
   <% if logged_in? %>
@@ -55,6 +56,11 @@
 <%= link_to "Login", login_path %>
 <%= link_to "Logout", logout_path %>
 
+  </div>
+
+  <div>
+  <h3>Your Cart</h3>
+  <!--<#%= render "carts/cart" %>    <!-- Render Cart as Partial -->
   </div>
 
 <!-- ******************************************** Render Cart to Side  -->

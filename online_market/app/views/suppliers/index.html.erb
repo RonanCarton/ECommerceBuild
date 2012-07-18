@@ -3,7 +3,7 @@
 
 <% @suppliers.each do |supplier| %>
   <ol class="unstyled">
-    <li><%= supplier.name %></li>
+    <li><h4><%= supplier.name %></h4></li>
     <li><%= supplier.description %></li>
   <li><%= image_tag(supplier.image_url) unless supplier.image_url.nil? %></li>
    <!-- <#% if current_user != nil and current_user.admin? %>  -->
