@@ -1,5 +1,12 @@
 <h3>Meet Your Growers and Makers</h3>
 
+<% form_tag suppliers_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search_query, params[:search_query] %>
+      <%= submit_tag "Search For Growers and Makers", :name => nil %>
+    </p>
+<% end %>
+
 
 <% @suppliers.each do |supplier| %>
   <ol class="unstyled">
@@ -16,14 +23,9 @@
 <% end %>
 </ol>
 
-<% form_tag suppliers_path, :method => 'get' do %>
-    <p>
-      <%= text_field_tag :search_query, params[:search_query] %>
-      <%= submit_tag "Search", :name => nil %>
-    </p>
-<% end %>
+
 
 <br />
-
+<% if current_user != nil and current_user.admin? %>
 <%= link_to 'New Supplier', new_supplier_path %>
-
+<% end %>

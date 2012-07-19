@@ -28,7 +28,7 @@
 <div class="body">
 
 
-<div class="body lead">
+<div class="body lead nav">
 
 | <%= link_to "Product Catalogue", products_path %> |
 <%= link_to "Leave Site", :controller => "welcome",
@@ -59,20 +59,15 @@
   </div>
 
   <div>
-  <h3>Your Cart</h3>
-  <!--<#%= render "carts/cart" %>    <!-- Render Cart as Partial -->
+  <h3>Your Carter</h3>
+<!--<#%= render "carts/cart" %>    <!-- Render Cart as Partial -->
   </div>
 
-<!-- ******************************************** Render Cart to Side  -->
-<!--<div id="columns">
-  <div id="side">
-    <div id="cart">
-      <#%= render @cart %>
-    </div>  -->
+
 
     <!-- Yield Set in Div -->
 
-    <div class="container">
+    <div class="container1">
       <%= yield %>
     </div>
 

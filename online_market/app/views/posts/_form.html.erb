@@ -23,11 +23,11 @@
     <%= f.label :content %><br />
     <%= f.text_area :content %>
   </div>
-    <h2>Tags</h2>
-    <%= render :partial => 'tags/form',
-               :locals => {:form => post_form} %>
+    <h4>Tags</h4>
+   <!-- <#%= render :partial => 'tags/form',
+               :locals => {:form => post_form} %>  -->
     <div class="actions">
-      <%= post_form.submit %>     <!-- post_form was f -->
+      <%= f.submit %>     <!-- post_form was f -->
     </div>
 
 <% end %>

@@ -1,27 +1,22 @@
-<h1>Listing posts</h1>
+<h4>Latest</h4>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Title</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.name %></td>
-    <td><%= post.title %></td>
-    <td><%= post.content %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+
+  <% @posts.each do |post| %>
+      <tr>
+        <td><h3><%= post.name %></h3></td>
+        <td><h4><%= post.title %></h4></td>
+        <td><%= post.content %></td>
+        <% if current_user != nil and current_user.admin? %>
+            <td><%= link_to 'Show', post %></td>
+            <td><%= link_to 'Edit', edit_post_path(post) %></td>
+            <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+            </tr>
+        <% end %>
+  <% end %>
 </table>
 
-<br />
-
+<br/>
+<% if current_user != nil and current_user.admin? %>
 <%= link_to 'New Post', new_post_path %>
+<% end %>

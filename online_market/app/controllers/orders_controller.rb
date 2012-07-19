@@ -56,7 +56,7 @@ class OrdersController < ApplicationController
       if @order.save
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil # removed @order,
-        format.html { redirect_to(redirect_to store_url, :notice => 'Thank you for your Order.') }
+         format.html { redirect_to products_path, :notice => 'Thank you for your Order.' }
         format.xml { render :xml => @order, :status => :created, :location => @order }
       else
         @cart = current_cart
@@ -97,3 +97,4 @@ class OrdersController < ApplicationController
 
 end
 
+#format.html { redirect_to(redirect_to welcome_url, :notice => 'Thank you for your Order.') }

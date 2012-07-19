@@ -1,7 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Our Produce</h1>
+<h3>Our Produce</h3>
 
+<% form_tag products_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search_query,
+                         params[:search_query] %> <!--advanced search params here -->
+      <%= submit_tag "Search For Good Food", :name => nil %>
+    </p>
+<% end %>
 
 
 
@@ -31,19 +38,14 @@
 
   </ul>
 <% end %>
-</table>
-<% form_tag products_path, :method => 'get' do %>
-    <p>
-      <%= text_field_tag :search_query,
-                         params[:search_query] %> <!--advanced search params here -->
-      <%= submit_tag "Search", :name => nil %>
-    </p>
-<% end %>
+
 
 
 <br />
 
+<% if current_user != nil and current_user.admin? %>
 <%= link_to 'New Product', new_product_path %>
+<% end %>               <!-- Admin Only -->
 
 <!-- hide from non admin loops -->
 

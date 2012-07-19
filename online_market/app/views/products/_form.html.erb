@@ -23,7 +23,7 @@
     <%= f.label :price %><br />
     <%= f.text_field :price %>
     <div class="field">
-      <%= image_tag(product.image_url) unless product.image_url.nil? %><br />
+    <!--  <#%= image_tag(product.image_url) unless product.image_url.nil? %><br />   -->
 
     </div>
 
@@ -36,7 +36,7 @@
     <%= f.submit %>
   </div>
 <% end %>
-  ------------------------------------------------------------------
+
 <!--<#%= form_for(@product) do |f| %>
     <#% if @product.errors.any? %>
         <div id="error_explanation">
