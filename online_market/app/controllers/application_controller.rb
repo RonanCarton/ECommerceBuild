@@ -2,6 +2,12 @@ class ApplicationController < ActionController::Base
   #before_filter :authorize, :except => [:create]   # authorize filter    skip_before_filter :authorize       # via agile
   protect_from_forgery
   protected
+
+  # Added for cart Sidebar
+  def index
+    @products = Product.order(:title)
+    @cart = current_cart
+  end
 # Returns the currently logged in user or nil if there isn't one
   def current_user
     return unless session[:user_id]
@@ -23,11 +29,7 @@ class ApplicationController < ActionController::Base
   def access_denied
     redirect_to login_path, :notice => "Please log in to continue" and return false
   end
- # Added for cart Sidebar
-  def index
-    @products = Product.order(:title)
-    @cart = current_cart
-  end
+
 
   # via agile
 
@@ -38,7 +40,7 @@ class ApplicationController < ActionController::Base
    end
 end
 
-#######################################
+
 
   private
   def current_cart

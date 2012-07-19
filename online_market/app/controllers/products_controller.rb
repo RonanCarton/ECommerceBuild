@@ -6,10 +6,10 @@ class ProductsController < ApplicationController
     @products = Product.search(params[:search_query])
 
     # New Search Params via http://stackoverflow.com/users/826233/shane
-    #@products = Product.find_all_by_category_id_and_location_id(params[:category_id], params[:location_id])
+    #@products = Product.find_all_by_category(params[:category])
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html #index.html.erb
       format.xml  { render :xml => @products }
     end
   end

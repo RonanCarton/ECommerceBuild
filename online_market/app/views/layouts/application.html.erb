@@ -14,62 +14,56 @@
 <!-- Boot Strap CSS -->
 
 
-
-
-
-
-
 <body>
 
-<%= image_tag "winecellar.jpg",  %>
+<%= image_tag "winecellar.jpg", %>
 <h1>Fallon and Byrne Store</h1>
 
 
 <div class="body">
 
 
-<div class="body lead nav">
 
-| <%= link_to "Product Catalogue", products_path %> |
-<%= link_to "Leave Site", :controller => "welcome",
-            :action => "thank_you" %> |
-<%= link_to "Register", :controller => "welcome", :action => "register" %> |
-<%= link_to "Home", :controller => "welcome", :action =>
-        "home" %> |
-<%= link_to "Your Cart", :controller => "carts",
-            :action => "your_cart" %> |
 
-  <%= link_to "Growers and Makers",suppliers_path %> |
-  <%= link_to "The Food Blog", posts_path %>
 
-<div id='header'>
-  <% if logged_in? %>
-      <%= current_user.email %> |
-      <%= link_to "Logout", logout_path %> |
-      <%= link_to "Create User", new_user_path %> |
-  <% else %>
-      <%= link_to "Login", login_path %> |
-  <% end %>
+
+  <div class="body lead nav">
+
+    | <%= link_to "Product Catalogue", products_path %> |
+    <%= link_to "Leave Site", :controller => "welcome",
+                :action => "thank_you" %> |
+    <%= link_to "Register", :controller => "welcome", :action => "register" %> |
+    <%= link_to "Home", :controller => "welcome", :action =>
+            "home" %> |
+    <%= link_to "Your Cart", :controller => "carts",
+                :action => "your_cart" %> |
+
+    <%= link_to "Growers and Makers", suppliers_path %> |
+    <%= link_to "The Food Blog", posts_path %>
+
+    <div id='header'>
+      <% if logged_in? %>
+          <%= current_user.email %> |
+          <%= link_to "Logout", logout_path %> |
+
+          <% if current_user != nil and current_user.admin? %>
+          <%= link_to "Create User", new_user_path %> |
+          <% end %>
+
+
+      <% else %>
+          <%= link_to "Login", login_path %> |
+      <% end %>
+    </div>
+    <div>
+      <%= render "carts/cart" %>
+    </div>
 </div>
 
-<!--<#%= link_to "Create User", new_user_path %> |  -->
- <!--   <#%= link_to "Login", login_path %>
-<#%= link_to "Logout", logout_path %>  -->
 
+  <div class="container1">
+    <%= yield %>
   </div>
-
-  <div>
-  <h3>Your Carter</h3>
-<!--<#%= render "carts/cart" %>    <!-- Render Cart as Partial -->
-  </div>
-
-
-
-    <!-- Yield Set in Div -->
-
-    <div class="container1">
-      <%= yield %>
-    </div>
 
 </div>
 </body>
@@ -79,31 +73,4 @@
 
 
 
-<!--<div id="columns">-->
-  <!--<div id="side">-->
-    <!--<#% if @cart %>-->
-    <!-- <#%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>  -->
-            <!--<#%= render @cart %>-->
-        <!--<#% end %>-->
-    <!--<#% end %>-->
-    <!--<ul>-->
-      <!--<li><a href="http://www....">Home</a></li>-->
-      <!--<li><a href="http://www..../faq">Questions</a></li>-->
-      <!--<li><a href="http://www..../news">News</a></li>-->
-      <!--<li><a href="http://www..../contact">Contact</a></li>-->
-    <!--</ul>-->
 
-    <!--<#% if session[:user_id] %>-->
-        <!--<ul>-->
-    <!--<li><#%= link_to 'line_items', line_items_path %></li>-->
-    <!--<li><#%= link_to 'Products', products_path %></li>-->
-    <!--<li><#%= link_to 'Users', users_path %></li>-->
-
-    <!--</ul>-->
-        <!--<#%= button_to 'Logout', logout_path, method: :delete %>-->
-         <!--<#% end %>-->
-  <!--</div>-->
-  <!--<div id="main">-->
-    <!--<#%= yield %>-->
-  <!--</div>-->
-<!--</div>-->

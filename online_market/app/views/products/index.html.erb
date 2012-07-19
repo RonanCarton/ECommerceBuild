@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" xmlns="http://www.w3.org/1999/html"><%= notice %></p>
 
 <h3>Our Produce</h3>
 
@@ -14,17 +14,23 @@
 
 <% @products.each do |product| %>
   <ul class="unstyled">
-
+    <hr/>
     <!-- <div class="image">
       <#%= link_to (product.image_url), item %>
     </div> -->
 
     <li><h3><%= product.name %></h3></li>
     <li><%= image_tag(product.image_url) unless product.image_url.nil? %></li>
-    <li><%= button_to 'Add to Cart', line_items_path(:product_id => product) %></li>
-    <li><%= product.description %></li>
-    <li><%= product.price %></li>
+    <% if logged_in? %>
+   <%=  button_to 'Add to Cart', line_items_path(:product_id => product) %>
+    <% else %>
+     <%= link_to "Login or Register to buy this item", login_path %>
+    <% end %>
 
+
+    <li><%= product.description %></li>
+    <h4>Price &euro;</h4><%=  product.price %>
+   <hr/>
     <li><%= product.user_id %></li>
 
 

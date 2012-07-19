@@ -1,15 +1,17 @@
 <p id="notice"> <%= notice %> </p>
 
-<h3>Your Cart</h3>
+
 <%= render(@cart.line_items) %>
+ <%= render "carts/cart" %>
 
-Total Price: <%= number_to_currency(@cart.total_price, :unit => '€') %>
-<%= button_to "Checkout", new_order_path, method: :get %>   <!-- added new checkout button -->
-<%= button_to 'Empty cart', @cart, :method => :delete, :confirm => 'Are you sure?' %>
-<%= link_to 'Edit', edit_cart_path(@cart) %> |
-<%= link_to 'Back', carts_path %>
 
-<!-- <#%= render(@cart.line_items) %> -->
+
+<!-- <#%= number_to_currency(@cart.total_price, :unit => '&euro')%>
+<#%= button_to "Checkout", new_order_path, method: :get %>
+<#%= button_to 'Empty cart', @cart, :method => :delete, :confirm => 'Are you sure?' %>
+<#%= link_to 'Edit', edit_cart_path(@cart) %> |
+<#%= link_to 'Back', carts_path %>  -->
+
 
 
 

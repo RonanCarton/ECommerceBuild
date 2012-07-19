@@ -4,7 +4,7 @@ class LineItem < ActiveRecord::Base
   belongs_to :cart
 
 
-def total_price    # via Agile Web Dev with rails
-  product.price * quantity
+def total_price
+  product.price * product.quantity
 end
 end
