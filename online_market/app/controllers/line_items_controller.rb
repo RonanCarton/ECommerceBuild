@@ -1,10 +1,12 @@
 class LineItemsController < ApplicationController
-  skip_before_filter :authorize, only: :create    # via agile
+skip_before_filter :authorize, only: :create    # via agile
 
   def create
     @cart = current_cart
     product = Product.find(params[:product_id])
-    @line_item = @cart.add_product(product)  # added product.id was product (removed)
+    #@line_item = @cart.add_product(product)# added product.id was product (removed)
+    @line_item = @cart.add_product(product)
+    #@line_item = @cart.line_items.new(:product => product)
 
     respond_to do |format|
       if @line_item.save

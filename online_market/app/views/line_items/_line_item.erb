@@ -1,5 +1,18 @@
+
+
 <tr>
-  <td><%= line_item.quantity %></td>
-  <td><%= line_item.product.name %></td>   <!-- Undefined method for .title? changed to name-->
-  <td class="item_price"><%= number_to_currency(line_item.total_price) %></td>  <!-- Undefined method for .total_price? -->
+  <% if current_user != nil and current_user.admin? %>
+  <td><%= line_item.quantity %>&times;</td>
+  <td><%= line_item.product.name %></td>
+  <td class="item_price"><%= number_to_currency(line_item.total_price) %></td>
+  <% end %>
 </tr>
+
+<!--<tr>-->
+
+<!--<#% if current_user != nil and current_user.admin? %>-->
+<!--<td><#%= line_item.quantity %></td>-->
+<!--<td><#%= line_item.product.name %></td>-->
+<!--<td class="item_price"><#%= number_to_currency(line_item.total_price) %></td>-->
+<!--<#% end %>-->
+<!--</tr>-->

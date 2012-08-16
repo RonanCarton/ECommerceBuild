@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
- # skip_before_filter :authorize, only: [:create, :update, :destroy]    # via agile
+skip_before_filter :authorize, only: [:create, :update, :destroy]    # via agile
  #GET /carts
   #GET /carts.xml
   def index

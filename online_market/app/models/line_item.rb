@@ -8,3 +8,7 @@ def total_price
   product.price * product.quantity
 end
 end
+
+#def total_price
+#  product.price * product.quantity
+#end

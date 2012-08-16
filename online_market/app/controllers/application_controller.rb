@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   # Added for cart Sidebar
   def index
-    @products = Product.order(:title)
+    @products = Product.order(:name)
     @cart = current_cart
   end
 # Returns the currently logged in user or nil if there isn't one
@@ -50,7 +50,6 @@ end
     session[:cart_id] = cart.id
     cart
     end
-
 
 
 

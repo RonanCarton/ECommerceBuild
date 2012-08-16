@@ -1,14 +1,17 @@
+
+<!-- Friday 20/07 We have not resolved "undefined method `total_price' for nil:NilClass"  so commented out this code to run app
+
+
+
 <div class="cart_title">Your Cart</div>
 <table>
-<!-- <#%= render(cart.line_items) %> -->
-  <tr class="total_line">
+ <tr class="total_line">
     <td colspan="2">Total</td>
-    <% if current_user.try(:admin?) %>
-<td class="total_cell"> <%= number_to_currency(cart.total_price,  :unit => '&euro') %> </td>
+
+  <td c><#%= number_to_currency(cart.total_price, :unit => "&euro;") %></td>
+
   </tr>
 </table>
-
-    <% end %>
-<%= button_to "Checkout", new_order_path, method: :get %>
-<%= button_to 'Empty cart', cart, method: :delete,
-                confirm: 'Are you sure?' %>
+<#%= button_to "Checkout", new_order_path, method: :get %>
+<#%= button_to 'Empty cart', cart, method: :delete,
+                confirm: 'Are you sure?' %>    -->

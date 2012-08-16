@@ -1,4 +1,4 @@
-<p id="notice" xmlns="http://www.w3.org/1999/html"><%= notice %></p>
+<p id="notice" ><%= notice %></p>
 
 <h3>Our Produce</h3>
 
@@ -13,44 +13,41 @@
 
 
 <% @products.each do |product| %>
-  <ul class="unstyled">
-    <hr/>
-    <!-- <div class="image">
-      <#%= link_to (product.image_url), item %>
-    </div> -->
-
-    <li><h3><%= product.name %></h3></li>
-    <li><%= image_tag(product.image_url) unless product.image_url.nil? %></li>
-    <% if logged_in? %>
-   <%=  button_to 'Add to Cart', line_items_path(:product_id => product) %>
-    <% else %>
-     <%= link_to "Login or Register to buy this item", login_path %>
-    <% end %>
+    <ul class="unstyled">
+      <hr/>
 
 
-    <li><%= product.description %></li>
-    <h4>Price &euro;</h4><%=  product.price %>
-   <hr/>
-    <li><%= product.user_id %></li>
+      <li><h3><%= product.name %></h3></li>
+      <li><%= image_tag(product.image_url) unless product.image_url.nil? %></li>
+      <% if logged_in? %>
+          <%= button_to 'Add to Cart', line_items_path(:product_id => product) %>
+      <% else %>
+          <%= link_to "Login or Register to buy this item", login_path %>
+      <% end %>
 
 
-   <% if current_user != nil and current_user.admin? %>
-    <li><%= link_to 'Show', product %></li>
-    <li><%= link_to 'Edit', edit_product_path(product) %></li>
-    <li><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></li>
-   <% end %>
+      <li><%= product.description %></li>
+      <h4>Price &euro;</h4><%= product.price %>
+      <hr/>
+      <li><%= product.user_id %></li>
 
 
+      <% if current_user != nil and current_user.admin? %>
+          <li><%= link_to 'Show', product %></li>
+          <li><%= link_to 'Edit', edit_product_path(product) %></li>
+          <li><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></li>
+      <% end %>
 
-  </ul>
+
+    </ul>
 <% end %>
 
 
 
-<br />
+<br/>
 
 <% if current_user != nil and current_user.admin? %>
-<%= link_to 'New Product', new_product_path %>
+    <%= link_to 'New Product', new_product_path %>
 <% end %>               <!-- Admin Only -->
 
 <!-- hide from non admin loops -->

@@ -4,7 +4,7 @@
   <title>Fallon & Byrne Online Market</title>
 
 
-  <!-- Changed Title -->
+
 
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
@@ -23,15 +23,11 @@
 <div class="body">
 
 
-
-
-
-
   <div class="body lead nav">
 
-    | <%= link_to "Product Catalogue", products_path %> |
-    <%= link_to "Leave Site", :controller => "welcome",
-                :action => "thank_you" %> |
+    | <%= link_to "Our Produce", products_path %> |
+    <%= link_to "Leave Site", :controller => "welcome", :action => "thank_you" %> |
+
     <%= link_to "Register", :controller => "welcome", :action => "register" %> |
     <%= link_to "Home", :controller => "welcome", :action =>
             "home" %> |
@@ -47,7 +43,7 @@
           <%= link_to "Logout", logout_path %> |
 
           <% if current_user != nil and current_user.admin? %>
-          <%= link_to "Create User", new_user_path %> |
+              <%= link_to "Create User", new_user_path %> |
           <% end %>
 
 
@@ -56,16 +52,24 @@
       <% end %>
     </div>
     <div>
-      <%= render "carts/cart" %>
+
+      <div id="columns">
+        <div id="side">
+          <div id="cart">
+            <%= render "carts/cart" %>
+          </div>
+
+
+        </div>
+      </div>
+
+
+      <div class="container1">
+        <%= yield %>
+      </div>
     </div>
-</div>
-
-
-  <div class="container1">
-    <%= yield %>
   </div>
 
-</div>
 </body>
 </html>
 

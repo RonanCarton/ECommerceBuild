@@ -27,10 +27,10 @@
       <%= f.text_field :email, size: 40 %>
     </div>
     <div class="field">
-      <%= f.label :pay_type %>
+      <%= f.label :pay_type, %>
       <br/>
-      <%= f.text_field :pay_type, # Order::PAYMENT_TYPES,
-                       prompt: 'Select a payment method' %>
+      <%= f.text_field :pay_type,  #Order::PAYMENT_TYPES,
+                       prompt: 'Select a payment method ' %>
     </div>
     <div class="actions">
       <%= f.submit 'Place Order' %>
